@@ -21,6 +21,8 @@ export const addProductApi = async (product) => {
 };
 
 export const loadProductsApi = async () => {
+  console.log('before load')
   const response = await axios.get(`${API}/products`);
-  return parseList(response, 200);
+  console.log('after load')
+  return parseList(response, 200); 
 };
